@@ -1,0 +1,146 @@
+:root {
+    --primary-green: #198754;
+    --white: #FFFFFC;
+    --black: #001011;
+    --pale-blue: #6ccff6;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--primary-green), transparent);
+    margin: 0;
+    color: var(--black);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main__header {
+    background-color: var(--primary-green);
+    padding: 1em;
+}
+
+.main__nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main__nav__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+.main__nav__button__bars {
+    display: block;
+    background-color: var(--white);
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+}
+
+.main__nav__button__links {
+    display: none;
+}
+
+.main__nav__button__links.open {
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 1.5em;
+    right: .5em;
+    padding: 1rem;
+}
+
+.main__nav__button__bars.open {
+    background-color: var(--black);
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: all .5s ease-in-out;
+}
+
+.main__nav__button__links a {
+    color: var(--black);
+    text-decoration: none;
+    margin: 5px 0;
+    width: 33%;
+}
+
+
+[class*="__button__login"] {
+    background-color: var(--pale-blue);
+    border: var(--black) 1px solid;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
+}
+
+[class*="__button__login"]:hover {
+    background-color: var(--white);
+}
+
+main {
+    background: linear-gradient(to bottom, var(--primary-green), transparent);
+    text-align: center;
+}
+
+.main__hero {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.main__about {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.main__about__image {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main__about__image img {
+    max-width: 90%;
+    width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        text-align: left;
+        padding: 2rem;
+    }
+
+    .main__nav__button {
+        width: 33%;
+        text-align: center;
+    }
+
+    .main__nav__button__bars {
+        display: none;
+    }
+
+    .main__nav__button__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 0;
+        right: 0;
+        background: transparent;
+    }
+
+    .main__content {
+        width: 75%;     
+        margin: 0 auto;
+    }
+}
